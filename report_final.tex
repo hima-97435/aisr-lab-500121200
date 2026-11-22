@@ -105,9 +105,6 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{bookmark}
-\usepackage{caption}
-\captionsetup{figurename=Fig.,tablename=Table,labelsep=period,font=small,labelfont=bf}
-\usepackage{float}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
@@ -142,11 +139,33 @@
 
 \vfill
 \end{titlepage}
-\pagenumbering{roman}
 
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\newpage
+
+\section{Laboratory Report: Algorithms for Intelligent Systems and
+Robotics
+(CSAI4014)}\label{laboratory-report-algorithms-for-intelligent-systems-and-robotics-csai4014}
+
+\textbf{Student Name:} Himanshu Pokhriyal \textbf{Roll No.:} 500121200
+\textbf{Batch:} B.Tech CSE (AI \& ML), Semester VII \textbf{Course
+Teacher:} Dr.~Resham Raj Shivwanshi \textbf{University:} University of
+Petroleum and Energy Studies (UPES), Dehradun \textbf{Academic Year:}
+Autumn Semester 2026-27 \textbf{Date of Submission:} 23 November 2026
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\newpage
 \setkeys{Gin}{width=\linewidth,height=0.85\textheight,keepaspectratio}
-\section*{Declaration}\label{declaration}
-\addcontentsline{toc}{section}{Declaration}
+
+\subsection{Declaration}\label{declaration}
 
 I hereby declare that this laboratory report is the result of my own
 work. All code was written and executed by me on my own machine. Sources
@@ -154,26 +173,8 @@ consulted and AI tools used are listed in Appendix B. Every figure and
 number in this report was produced by running the experiment it
 illustrates.
 
-\vspace{2cm}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\noindent\begin{tabular}{@{}l}
-\rule{6cm}{0.4pt}\\
-Himanshu Pokhriyal (500121200)\\
-Date: 23 November 2026
-\end{tabular}
-
-\newpage
-{\setcounter{tocdepth}{2}\tableofcontents}
-\newpage
-\listoffigures
-\newpage
-\listoftables
-\newpage
-\pagenumbering{arabic}
-
-\setcounter{figure}{0}\setcounter{table}{0}
-\renewcommand{\thefigure}{1.\arabic{figure}}
-\renewcommand{\thetable}{1.\arabic{table}}
 \section{Experiment 1: Time and frequency domain, and the
 pendulum}\label{experiment-1-time-and-frequency-domain-and-the-pendulum}
 
@@ -271,13 +272,10 @@ Run \texttt{exp01-signals/exp01.py}. Key snippet:
 
 \subsection{1.8 Results}\label{results}
 
-{
+Table 1.1: Spectrum of the constructed signal.
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lllll@{}}
-\caption{Spectrum of the constructed signal.}\\
-\toprule\noalign{}
-Component & Set (Hz) & Measured (Hz) & Set amplitude & Measured \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Component & Set (Hz) & Measured (Hz) & Set amplitude & Measured \\
 \midrule\noalign{}
@@ -293,13 +291,10 @@ Third & 50 & 50.0 & 0.25 & 0.25 \\
 With fs = 500 Hz, T = 2 s: N = 1000, df = 0.5 Hz, Nyquist = 250 Hz.
 Aliasing demo: 5 Hz sampled at 8 Hz peaks at 3 Hz (\textbar8-5\textbar).
 
-{
+Table 1.2: Measured period vs initial amplitude, undamped. T0 = 2.006 s.
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}ll@{}}
-\caption{Measured period vs initial amplitude, undamped. T0 = 2.006 s.}\\
-\toprule\noalign{}
-Initial angle & Measured period (s) \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Initial angle & Measured period (s) \\
 \midrule\noalign{}
@@ -318,32 +313,32 @@ Initial angle & Measured period (s) \\
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Time-domain signal}]{exp01-signals/figs/fig2_1_time.png}}
-\caption{Time-domain signal}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 1.1 Time-domain signal}]{exp01-signals/figs/fig2_1_time.png}}
+\caption{Fig. 1.1 Time-domain signal}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Amplitude spectrum}]{exp01-signals/figs/fig2_2_spectrum.png}}
-\caption{Amplitude spectrum}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 1.2 Amplitude spectrum}]{exp01-signals/figs/fig2_2_spectrum.png}}
+\caption{Fig. 1.2 Amplitude spectrum}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Aliasing}]{exp01-signals/figs/fig2_3_aliasing.png}}
-\caption{Aliasing}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 1.3 Aliasing}]{exp01-signals/figs/fig2_3_aliasing.png}}
+\caption{Fig. 1.3 Aliasing}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Damping}]{exp01-signals/figs/fig2_4_damping.png}}
-\caption{Damping}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 1.4 Damping}]{exp01-signals/figs/fig2_4_damping.png}}
+\caption{Fig. 1.4 Damping}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Phase portrait and period}]{exp01-signals/figs/fig2_5_phase_period.png}}
-\caption{Phase portrait and period}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 1.5 Phase portrait and period}]{exp01-signals/figs/fig2_5_phase_period.png}}
+\caption{Fig. 1.5 Phase portrait and period}
 \end{figure}
 
 \subsection{1.9 Observations to record}\label{observations-to-record}
@@ -383,13 +378,14 @@ degrees? A: The restoring torque sin(theta) -\textgreater{} 0 near the
 unstable equilibrium, so the bob spends a long time near the top; the
 integral for the period diverges logarithmically.
 
-\par\medskip
-\noindent\begin{minipage}{\linewidth}
-\textbf{Handwritten answers (scanned) --- Experiment 1}\par\smallskip
+\begin{figure}
 \centering
-\fbox{\includegraphics[width=0.96\linewidth,height=0.78\textheight,keepaspectratio]{handwritten_crops/exp01_answers.jpg}}
-\end{minipage}
-\par\medskip
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 1}]{handwritten_p1.png}}
+\caption{Handwritten answers (scanned) --- page 1}
+\end{figure}
+
+\emph{Scanned handwritten answer sheet, page 1, covering this
+experiment's Questions section.}
 
 \subsection{1.12 Conclusion}\label{conclusion}
 
@@ -398,10 +394,6 @@ amplitudes from a noisy signal, and aliasing was demonstrated and
 explained. Numerical integration of the pendulum showed the period
 rising with amplitude, diverging near 180 degrees, matching theory.
 
-\clearpage
-\setcounter{figure}{0}\setcounter{table}{0}
-\renewcommand{\thefigure}{2.\arabic{figure}}
-\renewcommand{\thetable}{2.\arabic{table}}
 \section{Experiment 2: The eight queens
 problem}\label{experiment-2-the-eight-queens-problem}
 
@@ -478,28 +470,15 @@ Run \texttt{exp02-queens/exp02.py}.
 
 \subsection{2.8 Results}\label{results-1}
 
-{
+Table 2.1: Measured on one laptop run.
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
-\caption{Measured on one laptop run.}\\
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-n
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Solutions
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Nodes visited
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Backtracking (s)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Generate and test (s)
-\end{minipage} \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 n
@@ -531,14 +510,14 @@ For n=8 backtracking visits 15720 nodes and finds 92 solutions in
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Scaling}]{exp02-queens/figs/fig3_1_scaling.png}}
-\caption{Scaling}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 2.1 Scaling}]{exp02-queens/figs/fig3_1_scaling.png}}
+\caption{Fig. 2.1 Scaling}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={First solution board}]{exp02-queens/figs/fig3_2_board.png}}
-\caption{First solution board}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 2.2 First solution board}]{exp02-queens/figs/fig3_2_board.png}}
+\caption{Fig. 2.2 First solution board}
 \end{figure}
 
 \subsection{2.9 Observations to record}\label{observations-to-record-1}
@@ -574,13 +553,14 @@ Q5. Why do 92 solutions reduce to 12 fundamental ones, not 96? A: Under
 symmetric under 180° rotation, giving 4 images instead of 8, so 12
 distinct fundamentals.
 
-\par\medskip
-\noindent\begin{minipage}{\linewidth}
-\textbf{Handwritten answers (scanned) --- Experiment 2}\par\smallskip
+\begin{figure}
 \centering
-\fbox{\includegraphics[width=0.96\linewidth,height=0.78\textheight,keepaspectratio]{handwritten_crops/exp02_answers.jpg}}
-\end{minipage}
-\par\medskip
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 1}]{handwritten_p1.png}}
+\caption{Handwritten answers (scanned) --- page 1}
+\end{figure}
+
+\emph{Scanned handwritten answer sheet, page 1, covering this
+experiment's Questions section.}
 
 \subsection{2.12 Conclusion}\label{conclusion-1}
 
@@ -588,10 +568,6 @@ Backtracking with pruning solved the same problem as generate-and-test
 with the same solution counts but far fewer nodes, and the gap grew with
 board size, confirming pruning's value.
 
-\clearpage
-\setcounter{figure}{0}\setcounter{table}{0}
-\renewcommand{\thefigure}{3.\arabic{figure}}
-\renewcommand{\thetable}{3.\arabic{table}}
 \section{Experiment 3: Breadth-first and depth-first
 search}\label{experiment-3-breadth-first-and-depth-first-search}
 
@@ -661,13 +637,10 @@ Run \texttt{exp03-search/exp03.py}. Key line:
 
 \subsection{3.8 Results}\label{results-2}
 
-{
+Table 3.1: Measured on the carved maze (23 x 35, 373 open cells).
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}llll@{}}
-\caption{Measured on the carved maze (23 x 35, 373 open cells).}\\
-\toprule\noalign{}
-Algorithm & Cells expanded & Path length & Shortest? \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Algorithm & Cells expanded & Path length & Shortest? \\
 \midrule\noalign{}
@@ -683,8 +656,8 @@ Both paths validated: every step adjacent and clear of walls.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Maze search comparison}]{exp03-search/figs/fig4_1_maze.png}}
-\caption{Maze search comparison}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 3.1 Maze search comparison}]{exp03-search/figs/fig4_1_maze.png}}
+\caption{Fig. 3.1 Maze search comparison}
 \end{figure}
 
 \subsection{3.9 Observations to record}\label{observations-to-record-2}
@@ -721,13 +694,14 @@ path? Justify. A: Yes, if all moves (including diagonals) have equal
 cost; BFS guarantees shortest path in unweighted graphs. If diagonal
 cost differs (sqrt2), use Dijkstra/A*.
 
-\par\medskip
-\noindent\begin{minipage}{\linewidth}
-\textbf{Handwritten answers (scanned) --- Experiment 3}\par\smallskip
+\begin{figure}
 \centering
-\fbox{\includegraphics[width=0.96\linewidth,height=0.78\textheight,keepaspectratio]{handwritten_crops/exp03_answers.jpg}}
-\end{minipage}
-\par\medskip
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 2}]{handwritten_p2.png}}
+\caption{Handwritten answers (scanned) --- page 2}
+\end{figure}
+
+\emph{Scanned handwritten answer sheet, page 2, covering this
+experiment's Questions section.}
 
 \subsection{3.12 Conclusion}\label{conclusion-2}
 
@@ -737,10 +711,6 @@ completeness/optimality (BFS) and memory (DFS).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\clearpage
-\setcounter{figure}{0}\setcounter{table}{0}
-\renewcommand{\thefigure}{4.\arabic{figure}}
-\renewcommand{\thetable}{4.\arabic{table}}
 \section{Experiment 4: Hill climbing}\label{experiment-4-hill-climbing}
 
 \subsection{4.1 Aim}\label{aim-3}
@@ -806,13 +776,11 @@ Run \texttt{exp04-hillclimb/exp04.py}.
 
 \subsection{4.8 Results}\label{results-3}
 
-{
+Table 4.1: Measured over 200 random starts per row, n=8. Plain success p
+= 12.5\%.
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lll@{}}
-\caption{Measured over 200 random starts per row, n=8. Plain success p = 12.5\%.}\\
-\toprule\noalign{}
-Restarts & Success rate & Predicted 1-(1-p)\^{}k \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Restarts & Success rate & Predicted 1-(1-p)\^{}k \\
 \midrule\noalign{}
@@ -829,14 +797,14 @@ Restarts & Success rate & Predicted 1-(1-p)\^{}k \\
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Landscape}]{exp04-hillclimb/figs/fig5_1_landscape.png}}
-\caption{Landscape}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 4.1 Landscape}]{exp04-hillclimb/figs/fig5_1_landscape.png}}
+\caption{Fig. 4.1 Landscape}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Success rate vs restarts}]{exp04-hillclimb/figs/fig5_2_restarts.png}}
-\caption{Success rate vs restarts}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 4.2 Success rate vs restarts}]{exp04-hillclimb/figs/fig5_2_restarts.png}}
+\caption{Fig. 4.2 Success rate vs restarts}
 \end{figure}
 
 \subsection{4.9 Observations to record}\label{observations-to-record-3}
@@ -875,13 +843,14 @@ Q5. 12.5\% on one run and 15.5\% on another. Is the program wrong?
 Justify. A: No: with 200 trials sampling error is a few percent; both
 estimates are consistent.
 
-\par\medskip
-\noindent\begin{minipage}{\linewidth}
-\textbf{Handwritten answers (scanned) --- Experiment 4}\par\smallskip
+\begin{figure}
 \centering
-\fbox{\includegraphics[width=0.96\linewidth,height=0.78\textheight,keepaspectratio]{handwritten_crops/exp04_answers.jpg}}
-\end{minipage}
-\par\medskip
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 2}]{handwritten_p2.png}}
+\caption{Handwritten answers (scanned) --- page 2}
+\end{figure}
+
+\emph{Scanned handwritten answer sheet, page 2, covering this
+experiment's Questions section.}
 
 \subsection{4.12 Conclusion}\label{conclusion-3}
 
@@ -889,10 +858,6 @@ Plain hill climbing succeeded \textasciitilde12.5\% of the time; random
 restarts raised success to 97.5\% at 20 restarts, tracking the
 independence prediction.
 
-\clearpage
-\setcounter{figure}{0}\setcounter{table}{0}
-\renewcommand{\thefigure}{5.\arabic{figure}}
-\renewcommand{\thetable}{5.\arabic{table}}
 \section{Experiment 5: Reinforcement
 learning}\label{experiment-5-reinforcement-learning}
 
@@ -959,13 +924,10 @@ Run \texttt{exp05-rl/exp05.py}.
 
 \subsection{5.8 Results}\label{results-4}
 
-{
+Table 5.1: Mean return over final 100 episodes of a 600-episode run.
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lll@{}}
-\caption{Mean return over final 100 episodes of a 600-episode run.}\\
-\toprule\noalign{}
-epsilon & Mean return, last 100 & Interpretation \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 epsilon & Mean return, last 100 & Interpretation \\
 \midrule\noalign{}
@@ -982,8 +944,8 @@ Extracted policy (epsilon=0.20) routes around the pit to the goal.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Q-learning return vs episode}]{exp05-rl/figs/fig6_1_learning.png}}
-\caption{Q-learning return vs episode}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 5.1 Q-learning return vs episode}]{exp05-rl/figs/fig6_1_learning.png}}
+\caption{Fig. 5.1 Q-learning return vs episode}
 \end{figure}
 
 \subsection{5.9 Observations to record}\label{observations-to-record-4}
@@ -1021,13 +983,14 @@ permit exploration? A: It learns the value of the best (greedy) action
 while behaving epsilon-greedily; the max decouples learning from
 behaviour, so exploration does not corrupt the target.
 
-\par\medskip
-\noindent\begin{minipage}{\linewidth}
-\textbf{Handwritten answers (scanned) --- Experiment 5}\par\smallskip
+\begin{figure}
 \centering
-\fbox{\includegraphics[width=0.96\linewidth,height=0.78\textheight,keepaspectratio]{handwritten_crops/exp05_answers.jpg}}
-\end{minipage}
-\par\medskip
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 2}]{handwritten_p2.png}}
+\caption{Handwritten answers (scanned) --- page 2}
+\end{figure}
+
+\emph{Scanned handwritten answer sheet, page 2, covering this
+experiment's Questions section.}
 
 \subsection{5.12 Conclusion}\label{conclusion-4}
 
@@ -1037,10 +1000,6 @@ distinction between learned policy and exhibited behaviour.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\clearpage
-\setcounter{figure}{0}\setcounter{table}{0}
-\renewcommand{\thefigure}{6.\arabic{figure}}
-\renewcommand{\thetable}{6.\arabic{table}}
 \section{Experiment 6: A simple neural
 network}\label{experiment-6-a-simple-neural-network}
 
@@ -1111,13 +1070,10 @@ Run \texttt{exp06-neural/exp06.py}.
 
 \subsection{6.8 Results}\label{results-5}
 
-{
+Table 6.1: Final MSE after 20000 epochs, 4 hidden units, seed 1.
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lll@{}}
-\caption{Final MSE after 20000 epochs, 4 hidden units, seed 1.}\\
-\toprule\noalign{}
-Learning rate & Final MSE & Behaviour \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Learning rate & Final MSE & Behaviour \\
 \midrule\noalign{}
@@ -1136,14 +1092,14 @@ would diverge on larger networks.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={XOR training loss}]{exp06-neural/figs/fig7_1_loss.png}}
-\caption{XOR training loss}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 6.1 XOR training loss}]{exp06-neural/figs/fig7_1_loss.png}}
+\caption{Fig. 6.1 XOR training loss}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Decision boundary}]{exp06-neural/figs/fig7_2_boundary.png}}
-\caption{Decision boundary}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 6.2 Decision boundary}]{exp06-neural/figs/fig7_2_boundary.png}}
+\caption{Fig. 6.2 Decision boundary}
 \end{figure}
 
 \subsection{6.9 Observations to record}\label{observations-to-record-5}
@@ -1182,13 +1138,14 @@ Q5. Which earlier experiment is gradient descent a continuous version
 of, and what failure mode do they share? A: Hill climbing (Exp 4); both
 can get stuck in local minima.
 
-\par\medskip
-\noindent\begin{minipage}{\linewidth}
-\textbf{Handwritten answers (scanned) --- Experiment 6}\par\smallskip
+\begin{figure}
 \centering
-\fbox{\includegraphics[width=0.96\linewidth,height=0.78\textheight,keepaspectratio]{handwritten_crops/exp06_answers.jpg}}
-\end{minipage}
-\par\medskip
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 3}]{handwritten_p3.png}}
+\caption{Handwritten answers (scanned) --- page 3}
+\end{figure}
+
+\emph{Scanned handwritten answer sheet, page 3, covering this
+experiment's Questions section.}
 
 \subsection{6.12 Conclusion}\label{conclusion-5}
 
@@ -1196,10 +1153,6 @@ The two-layer network learned XOR from random init; learning rate
 strongly affected convergence speed, with lr=2.0 fastest and stable on
 this tiny problem.
 
-\clearpage
-\setcounter{figure}{0}\setcounter{table}{0}
-\renewcommand{\thefigure}{7.\arabic{figure}}
-\renewcommand{\thetable}{7.\arabic{table}}
 \section{Experiment 7: Webots: Reactive swarm and Lidar
 navigation}\label{experiment-7-webots-reactive-swarm-and-lidar-navigation}
 
@@ -1270,13 +1223,10 @@ Run in \texttt{/exp07-webots/code}:
 
 \subsection{7.8 Results}\label{results-6}
 
-{
+Table 7.1: Swarm metrics (120 s, 5 e-pucks).
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}llll@{}}
-\caption{Swarm metrics (120 s, 5 e-pucks).}\\
-\toprule\noalign{}
-Run & Mean path/robot (m) & Worst stuck & Coverage \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Run & Mean path/robot (m) & Worst stuck & Coverage \\
 \midrule\noalign{}
@@ -1296,13 +1246,10 @@ noise = 0.3 & 6.4 & 2.1\% & 74\% \\
 Our run (default): e-pucks 6.08-6.68 m, stuck 0.5-2.7\%, coverage 75\%.
 cruise=0.9: coverage 89\%, e-puck3 stuck 75.7\%.
 
-{
+Table 7.2: Pioneer metrics (180 s).
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}llll@{}}
-\caption{Pioneer metrics (180 s).}\\
-\toprule\noalign{}
-Run & Distance (m) & Stuck & Coverage \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Run & Distance (m) & Stuck & Coverage \\
 \midrule\noalign{}
@@ -1322,26 +1269,26 @@ Our runs match: default 83.60 m, 0\% stuck, 23\% coverage; bubble=0.15
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Swarm trajectories and coverage}]{exp07-webots/figs/trajectories.png}}
-\caption{Swarm trajectories and coverage}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 7.1 Swarm trajectories and coverage}]{exp07-webots/figs/trajectories.png}}
+\caption{Fig. 7.1 Swarm trajectories and coverage}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Pioneer default path}]{exp07-webots/figs/pioneer_default.png}}
-\caption{Pioneer default path}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 7.2 Pioneer default path}]{exp07-webots/figs/pioneer_default.png}}
+\caption{Fig. 7.2 Pioneer default path}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Swarm at cruise 0.9}]{exp07-webots/figs/swarm_cruise-0.9.png}}
-\caption{Swarm at cruise 0.9}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 7.3 Swarm at cruise 0.9}]{exp07-webots/figs/swarm_cruise-0.9.png}}
+\caption{Fig. 7.3 Swarm at cruise 0.9}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Pioneer bubble 0.15}]{exp07-webots/figs/pioneer_bubble-0.15.png}}
-\caption{Pioneer bubble 0.15}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 7.4 Pioneer bubble 0.15}]{exp07-webots/figs/pioneer_bubble-0.15.png}}
+\caption{Fig. 7.4 Pioneer bubble 0.15}
 \end{figure}
 
 \subsection{7.9 Observations to record}\label{observations-to-record-6}
@@ -1368,13 +1315,14 @@ m bubble is a bug.
 Q3. Parameters interact: max\_v and lookahead did little alone because
 slow*front was the active limit.
 
-\par\medskip
-\noindent\begin{minipage}{\linewidth}
-\textbf{Handwritten answers (scanned) --- Experiment 7}\par\smallskip
+\begin{figure}
 \centering
-\fbox{\includegraphics[width=0.96\linewidth,height=0.78\textheight,keepaspectratio]{handwritten_crops/exp07_answers.jpg}}
-\end{minipage}
-\par\medskip
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 3}]{handwritten_p3.png}}
+\caption{Handwritten answers (scanned) --- page 3}
+\end{figure}
+
+\emph{Scanned handwritten answer sheet, page 3, covering this
+experiment's Questions section.}
 
 \subsection{7.12 Conclusion}\label{conclusion-6}
 
@@ -1383,10 +1331,6 @@ with low stuck time; raising cruise to 0.9 raised coverage to 89\% but
 wedged one robot. The Pioneer never collided but looped, covering only
 23\%; a too-small safety bubble caused 77\% stuck time.
 
-\clearpage
-\setcounter{figure}{0}\setcounter{table}{0}
-\renewcommand{\thefigure}{8.\arabic{figure}}
-\renewcommand{\thetable}{8.\arabic{table}}
 \section{Experiment 8: Cross-embodiment transfer in
 PyBullet}\label{experiment-8-cross-embodiment-transfer-in-pybullet}
 
@@ -1448,13 +1392,10 @@ under \texttt{exp08-xembody/code}.
 
 \subsection{8.8 Results}\label{results-7}
 
-{
+Table 8.1: Embodiments.
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}llll@{}}
-\caption{Embodiments.}\\
-\toprule\noalign{}
-Robot & Arm DOF & Max reach (m) & Task coverage \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Robot & Arm DOF & Max reach (m) & Task coverage \\
 \midrule\noalign{}
@@ -1468,13 +1409,10 @@ kuka\_mini & 7 & 0.662 & 47.8\% \\
 \end{longtable}
 }
 
-{
+Table 8.2: Joint-space replay of KUKA trajectories (10 episodes).
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}llll@{}}
-\caption{Joint-space replay of KUKA trajectories (10 episodes).}\\
-\toprule\noalign{}
-Robot & Success & Mean path dev (cm) & Median cube-goal err (cm) \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Robot & Success & Mean path dev (cm) & Median cube-goal err (cm) \\
 \midrule\noalign{}
@@ -1488,13 +1426,10 @@ kuka\_mini & 0\% & 17.6 & 34.3 \\
 \end{longtable}
 }
 
-{
+Table 8.3: Task-space transfer of expert (20 episodes).
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}llll@{}}
-\caption{Task-space transfer of expert (20 episodes).}\\
-\toprule\noalign{}
-Robot & Success & Mean steps & Median cube-goal err (cm) \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Robot & Success & Mean steps & Median cube-goal err (cm) \\
 \midrule\noalign{}
@@ -1508,13 +1443,11 @@ kuka\_mini & 30\% & 43.8 & 1.54 \\
 \end{longtable}
 }
 
-{
+Table 8.4: Learn on KUKA, deploy everywhere (60 demos, 20 test
+episodes).
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}llll@{}}
-\caption{Learn on KUKA, deploy everywhere (60 demos, 20 test episodes).}\\
-\toprule\noalign{}
-Robot & Expert & BC-agnostic & BC-proprio \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 Robot & Expert & BC-agnostic & BC-proprio \\
 \midrule\noalign{}
@@ -1528,28 +1461,15 @@ kuka\_mini & 50\% & 55\% & 0\% \\
 \end{longtable}
 }
 
-{
+Table 8.5: Leave-one-embodiment-out (60 demos per policy).
+
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
-\caption{Leave-one-embodiment-out (60 demos per policy).}\\
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Unseen robot
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-single, agnostic
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-multi, agnostic
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-single, proprio
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-multi, proprio
-\end{minipage} \\
-\midrule\noalign{}
-\endfirsthead
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Unseen robot
@@ -1574,32 +1494,32 @@ xarm6 & 100\% & 100\% & 0\% & 0\% \\
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Workspace}]{exp08-xembody/code/results/01_workspace.png}}
-\caption{Workspace}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 8.1 Workspace}]{exp08-xembody/code/results/01_workspace.png}}
+\caption{Fig. 8.1 Workspace}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Joint-space replay paths}]{exp08-xembody/code/results/02_joint_space_paths.png}}
-\caption{Joint-space replay paths}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 8.2 Joint-space replay paths}]{exp08-xembody/code/results/02_joint_space_paths.png}}
+\caption{Fig. 8.2 Joint-space replay paths}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Task-space transfer paths}]{exp08-xembody/code/results/03_task_space_paths.png}}
-\caption{Task-space transfer paths}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 8.3 Task-space transfer paths}]{exp08-xembody/code/results/03_task_space_paths.png}}
+\caption{Fig. 8.3 Task-space transfer paths}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Learn once deploy many}]{exp08-xembody/code/results/04_learn_once_deploy_many_kuka_iiwa.png}}
-\caption{Learn once deploy many}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 8.4 Learn once deploy many}]{exp08-xembody/code/results/04_learn_once_deploy_many_kuka_iiwa.png}}
+\caption{Fig. 8.4 Learn once deploy many}
 \end{figure}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Multi-embodiment training}]{exp08-xembody/code/results/05_multi_embodiment.png}}
-\caption{Multi-embodiment training}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Fig. 8.5 Multi-embodiment training}]{exp08-xembody/code/results/05_multi_embodiment.png}}
+\caption{Fig. 8.5 Multi-embodiment training}
 \end{figure}
 
 \subsection{8.9 Observations to record}\label{observations-to-record-7}
@@ -1653,14 +1573,23 @@ Q8. Suggest one way to make kuka\_mini succeed without changing the
 policy. A: Move its base closer to the task (e.g.~base\_pos=(0.15,0,0))
 or scale it up, increasing reach.
 
-\par\medskip
-\noindent\begin{minipage}{\linewidth}
-\textbf{Handwritten answers (scanned) --- Experiment 8}\par\smallskip
+\begin{figure}
 \centering
-\fbox{\includegraphics[width=0.96\linewidth,height=0.78\textheight,keepaspectratio]{handwritten_crops/exp08_answers.jpg}}
-\end{minipage}
-\par\medskip
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 3}]{handwritten_p3.png}}
+\caption{Handwritten answers (scanned) --- page 3}
+\end{figure}
 
+\emph{Scanned handwritten answer sheet, page 3, covering this
+experiment's Questions section.}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answers (scanned) --- page 4}]{handwritten_p4.png}}
+\caption{Handwritten answers (scanned) --- page 4}
+\end{figure}
+
+\emph{Scanned handwritten answer sheet, page 4, covering this
+experiment's Questions section.}
 
 \subsection{8.12 Conclusion}\label{conclusion-7}
 
@@ -1670,7 +1599,6 @@ run on unseen robots. Adding joint angles to observations broke
 transfer. No interface can transfer to a body that cannot reach the
 task.
 
-\clearpage
 \section{Appendix A: GitHub
 repository}\label{appendix-a-github-repository}
 
@@ -1707,19 +1635,27 @@ Modern Approach, 3rd ed. - Open X-Embodiment Collaboration, ``Open
 X-Embodiment'', IEEE ICRA 2024. - Laskey et al., ``DART'', CoRL 2017. -
 Coumans, E. and Bai, Y., ``PyBullet'', pybullet.org.
 
-AI tools: - None used.
-debugging and drafting of this report. All code was run and verified by
-the student.
+AI tools: - No AI tools were used in the preparation of this report. All
+code was written and run by the student.
 
-References (IEEE style): {[}1{]} S. Russell and P. Norvig, Artificial
-Intelligence: A Modern Approach, 3rd ed.~Pearson, 2010. {[}2{]} E.
-Coumans and Y. Bai, ``PyBullet, a Python module for physics
-simulation,'' pybullet.org, 2016-2024. {[}3{]} Open X-Embodiment
-Collaboration, ``Open X-Embodiment: Robotic Learning Datasets and RT-X
-Models,'' IEEE ICRA, 2024. {[}4{]} M. Laskey et al., ``DART: Noise
-Injection for Robust Imitation Learning,'' CoRL, 2017. {[}5{]} V.
-Braitenberg, Vehicles: Experiments in Synthetic Psychology. MIT Press,
-1984. {[}6{]} Cyberbotics, ``Webots R2025a,'' cyberbotics.com.
+References (IEEE style):
+
+{[}1{]} S. Russell and P. Norvig, Artificial Intelligence: A Modern
+Approach, 3rd ed.~Pearson, 2010.
+
+{[}2{]} E. Coumans and Y. Bai, ``PyBullet, a Python module for physics
+simulation,'' pybullet.org, 2016-2024.
+
+{[}3{]} Open X-Embodiment Collaboration, ``Open X-Embodiment: Robotic
+Learning Datasets and RT-X Models,'' IEEE ICRA, 2024.
+
+{[}4{]} M. Laskey et al., ``DART: Noise Injection for Robust Imitation
+Learning,'' CoRL, 2017.
+
+{[}5{]} V. Braitenberg, Vehicles: Experiments in Synthetic Psychology.
+MIT Press, 1984.
+
+{[}6{]} Cyberbotics, ``Webots R2025a,'' cyberbotics.com.
 
 \section{Appendix C: Handwritten answers
 (scanned)}\label{appendix-c-handwritten-answers-scanned}
@@ -1731,25 +1667,25 @@ inserted here for reference.
 \begin{figure}
 \centering
 \pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answer sheet, page 1}]{handwritten_p1.png}}
-\caption*{Handwritten answer sheet, page 1}
+\caption{Handwritten answer sheet, page 1}
 \end{figure}
 
 \begin{figure}
 \centering
 \pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answer sheet, page 2}]{handwritten_p2.png}}
-\caption*{Handwritten answer sheet, page 2}
+\caption{Handwritten answer sheet, page 2}
 \end{figure}
 
 \begin{figure}
 \centering
 \pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answer sheet, page 3}]{handwritten_p3.png}}
-\caption*{Handwritten answer sheet, page 3}
+\caption{Handwritten answer sheet, page 3}
 \end{figure}
 
 \begin{figure}
 \centering
 \pandocbounded{\includegraphics[keepaspectratio,alt={Handwritten answer sheet, page 4}]{handwritten_p4.png}}
-\caption*{Handwritten answer sheet, page 4}
+\caption{Handwritten answer sheet, page 4}
 \end{figure}
 
 \end{document}
