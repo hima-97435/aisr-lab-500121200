@@ -3,3 +3,15 @@ __pycache__/
 .DS_Store
 .venv/
 venv/
+
+# local build artefacts and backups
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+report_final.pdf
+report_final.previous.pdf
+report_final.backup.tex
+report_final.md
