@@ -855,7 +855,7 @@ A skill in joint space did not transfer even between same-DOF arms. Task-space i
 
 All code for this report is stored in the GitHub repository:
 
-`https://github.com/<username>/aisr-lab-500121200`
+`https://github.com/hima-97435/aisr-lab-500121200`
 
 Repository layout:
 
